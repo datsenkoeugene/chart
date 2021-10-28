@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.chart {
+    border: 1px solid #cccccc;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+.subtitle {
+    text-anchor: middle;
+}
+
+.info {
+    text-anchor: start;
+}
+
+.axis {
+    stroke: #cccccc;
+    stroke-dasharray: 0;
+    stroke-width: 1;
+}
+
+.labels {
+    font-size: 13px;
+    color: #333;
+}
+
+.labels-y {
+    text-anchor: end;
+    transform: translate(-10px, 0);
+}
+
+.labels-x {
+    text-anchor: start;
+    transform: translate(-4px, 10px);
+}
+
+.label-title {
+    font-weight: bold;
+    font-size: 12px;
+    fill: black;
+}
+
+.rect {
+    cursor: pointer;
+    animation: animate .8s linear;
+    height: calc(100% - 100);
+}
+
+@keyframes animate {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: calc(100% - 100);
+    }
+}
